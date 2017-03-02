@@ -6,31 +6,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * Created by druker on 3/2/2017.
+ */
 var core_1 = require("@angular/core");
-var app_component_1 = require("./app.component");
-var platform_browser_1 = require("@angular/platform-browser");
+var rules_component_1 = require("./rules.component");
+var rules_service_1 = require("./rules.service");
 var http_1 = require("@angular/http");
-var rules_module_1 = require("./rules/rules.module");
-var AppModule = (function () {
-    function AppModule() {
+var MailRulesModule = (function () {
+    function MailRulesModule() {
     }
-    return AppModule;
+    return MailRulesModule;
 }());
-AppModule = __decorate([
+MailRulesModule = __decorate([
     core_1.NgModule({
         declarations: [
-            app_component_1.AppComponent
+            rules_component_1.MailRulesComponent
         ],
-        providers: [],
-        bootstrap: [app_component_1.AppComponent],
-        imports: [
-            platform_browser_1.BrowserModule,
-            http_1.HttpModule,
-            // my modules
-            rules_module_1.MailRulesModule
-        ],
-        exports: []
+        providers: [rules_service_1.RulesService],
+        bootstrap: [],
+        imports: [http_1.HttpModule],
+        exports: [rules_component_1.MailRulesComponent]
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], MailRulesModule);
+exports.MailRulesModule = MailRulesModule;
+//# sourceMappingURL=rules.module.js.map

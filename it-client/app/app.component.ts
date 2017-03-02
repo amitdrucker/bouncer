@@ -1,17 +1,18 @@
-import {Component,VERSION} from "@angular/core";
+import {Component, VERSION} from "@angular/core";
 
 let num = 1;
 
 @Component({
     selector: 'my-app',
-    styles:[`
+    styles: [`
     .blabla{
         background-color: yellow;
     }
 `],
-    template : `
+    template: `
     <div>
         hello
+        <mail-rules></mail-rules>
         <!--<nav>-->
             <!--<a routerLink="/home">Home</a> |-->
             <!--<a routerLink="/users">Users</a> |-->
@@ -108,24 +109,29 @@ let num = 1;
         </div>
         &ndash;&gt;
     </div>-->
-`})
-export class AppComponent{
-    name:string = "eyal"
-    pic : string = 'pic.jpg';
-    value:number = 10;
+`
+})
+export class AppComponent {
+    name: string = "eyal"
+    pic: string = 'pic.jpg';
+    value: number = 10;
 
-    constructor(){}
+    constructor() {
+    }
 
 
-    get border(){
+    get border() {
         return `${num}px solid black`;
     }
-    up(){num++;}
+
+    up() {
+        num++;
+    }
 }
 
 //Log({})(Component({})(AppComponent));
 
-function Log(arg){
+function Log(arg) {
     return function (target) {
 
         return target;
