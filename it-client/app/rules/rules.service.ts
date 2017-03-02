@@ -7,15 +7,11 @@ import {Http} from "@angular/http";
 @Injectable()
 export class RulesService {
 
-
-    // constructor() {
-    // }
-
     constructor(private http: Http) {
     }
 
     public loadRules() {
-        return this.http.get('http://localhost:3000/rules');
+        return this.http
+            .get('http://localhost:3000/rules');
     }
-
 }

@@ -22,15 +22,22 @@ export class MailRulesComponent {
         this.loadRules();
     }
 
-    public get rules(): any {
+    get rules(): any {
         return this._rules;
     }
 
     loadRules() {
         this.service.loadRules().subscribe(
-            rules => this._rules = rules,
-            error => this._rules = error,
-            () => console.log('done')
-        );
+            (rules) => {
+                this._rules = JSON.stringify(rules);
+            },
+            (error) => {
+                this._rules = "b"
+            },
+            () => {
+                console.log('done')
+            })
     }
+
+
 }

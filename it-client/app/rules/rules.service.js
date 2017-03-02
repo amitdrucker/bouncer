@@ -15,13 +15,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var RulesService = (function () {
-    // constructor() {
-    // }
     function RulesService(http) {
         this.http = http;
     }
     RulesService.prototype.loadRules = function () {
-        return this.http.get('http://localhost:3000/rules');
+        return this.http
+            .get('http://localhost:3000/rules');
     };
     return RulesService;
 }());

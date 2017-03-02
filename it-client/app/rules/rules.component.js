@@ -29,7 +29,13 @@ var MailRulesComponent = (function () {
     });
     MailRulesComponent.prototype.loadRules = function () {
         var _this = this;
-        this.service.loadRules().subscribe(function (rules) { return _this._rules = rules; }, function (error) { return _this._rules = error; }, function () { return console.log('done'); });
+        this.service.loadRules().subscribe(function (rules) {
+            _this._rules = JSON.stringify(rules);
+        }, function (error) {
+            _this._rules = "b";
+        }, function () {
+            console.log('done');
+        });
     };
     return MailRulesComponent;
 }());

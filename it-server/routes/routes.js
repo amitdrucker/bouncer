@@ -1,7 +1,9 @@
 /**
  * Created by druker on 2/21/2017.
  */
+
 var fs = require('fs');
+
 // create a rolling file logger based on date/time
 const opts = {
     logDirectory: './logs',
@@ -10,7 +12,6 @@ const opts = {
 };
 
 const log = require('simple-node-logger').createRollingFileLogger(opts);
-
 var appRouter = function (app) {
     app.get("/", function (req, res) {
         res.send("Hello World");
