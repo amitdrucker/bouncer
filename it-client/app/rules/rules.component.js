@@ -14,6 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var core_1 = require("@angular/core");
 var rules_service_1 = require("./rules.service");
+var rules_class_1 = require("./rules.class");
 var MailRulesComponent = (function () {
     function MailRulesComponent(service) {
         this.service = service;
@@ -30,9 +31,10 @@ var MailRulesComponent = (function () {
     MailRulesComponent.prototype.loadRules = function () {
         var _this = this;
         this.service.loadRules().subscribe(function (rules) {
-            _this._rules = JSON.stringify(rules);
+            _this._rules = rules;
         }, function (error) {
-            _this._rules = "b";
+            console.log(error);
+            _this._rules = new rules_class_1.Rules();
         }, function () {
             console.log('done');
         });
@@ -43,7 +45,7 @@ MailRulesComponent = __decorate([
     core_1.Component({
         selector: 'mail-rules',
         styles: [],
-        template: "\n<div>\n  {{rules}}\n  hello2\n</div>\n"
+        template: "\n<div>\n  {{rules?.rules[0].accounts[0]}}\n  hello2\n</div>\n"
     }),
     __metadata("design:paramtypes", [rules_service_1.RulesService])
 ], MailRulesComponent);

@@ -20,7 +20,8 @@ var RulesService = (function () {
     }
     RulesService.prototype.loadRules = function () {
         return this.http
-            .get('http://localhost:3000/rules');
+            .get('http://localhost:3000/rules')
+            .map(function (response) { return response.json(); });
     };
     return RulesService;
 }());

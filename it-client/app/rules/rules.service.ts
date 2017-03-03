@@ -3,6 +3,8 @@
  */
 import {Injectable} from "@angular/core";
 import {Http} from "@angular/http";
+import {Observable} from "rxjs";
+import {Rules} from "./rules.class";
 
 @Injectable()
 export class RulesService {
@@ -10,8 +12,9 @@ export class RulesService {
     constructor(private http: Http) {
     }
 
-    public loadRules() {
+    loadRules(): Observable<Rules> {
         return this.http
-            .get('http://localhost:3000/rules');
+            .get('http://localhost:3000/rules')
+            .map(response => response.json());
     }
 }

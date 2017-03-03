@@ -3,19 +3,20 @@
  */
 import {Component} from "@angular/core";
 import {RulesService} from "./rules.service";
+import {Rules} from "./rules.class";
 
 @Component({
     selector: 'mail-rules',
     styles: [],
     template: `
 <div>
-  {{rules}}
+  {{rules?.rules[0].accounts[0]}}
   hello2
 </div>
 `
 })
 export class MailRulesComponent {
-    private _rules: any;
+    private _rules: Rules;
 
     constructor(private service: RulesService) {
         console.log("a");
@@ -29,10 +30,11 @@ export class MailRulesComponent {
     loadRules() {
         this.service.loadRules().subscribe(
             (rules) => {
-                this._rules = JSON.stringify(rules);
+                this._rules = rules;
             },
             (error) => {
-                this._rules = "b"
+                console.log(error);
+                this._rules = new Rules();
             },
             () => {
                 console.log('done')
