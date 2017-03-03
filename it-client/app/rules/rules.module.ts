@@ -5,6 +5,7 @@ import {NgModule} from "@angular/core";
 import {MailRulesComponent} from "./rules.component";
 import {RulesService} from "./rules.service";
 import {HttpModule} from "@angular/http";
+import {BrowserModule} from "@angular/platform-browser";
 
 @NgModule({
     declarations: [
@@ -12,7 +13,8 @@ import {HttpModule} from "@angular/http";
     ],
     providers: [RulesService],
     bootstrap: [],
-    imports: [HttpModule],
+    imports: [HttpModule,
+        BrowserModule],
     exports: [MailRulesComponent]
 })
 export class MailRulesModule {

@@ -18,7 +18,6 @@ var rules_class_1 = require("./rules.class");
 var MailRulesComponent = (function () {
     function MailRulesComponent(service) {
         this.service = service;
-        console.log("a");
         this.loadRules();
     }
     Object.defineProperty(MailRulesComponent.prototype, "rules", {
@@ -45,7 +44,7 @@ MailRulesComponent = __decorate([
     core_1.Component({
         selector: 'mail-rules',
         styles: [],
-        template: "\n<div>\n  {{rules?.rules[0].accounts[0]}}\n  hello2\n</div>\n"
+        template: "\n<div class=\"container\">\n\t<div class=\"row\">\n           <select name=\"selectValue\" onchange=\"mostra(this.value)\">\n                <option value=\"\"></option>\n             <option value=\"santos\">Santos</option>\n             <option value=\"retroPorto\">Retro Porto</option>\n             <option value=\"itajai\">Itajai</option>\n             <option value=\"paranagua\">Paranagu\u00E1</option>\n             <option value=\"curitiba\">Curitiba</option>\n\n             <option value=\"saoPaulo\">Sao Paulo</option>\n\n          </select>\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t   <div class=\"esconde\" id=\"opdRetro\">\n             <table class=\"table table-striped table-hover \">\n            <thead>\n                <tr class=\"bg-primary\">\n                    <th>Rule</th>\n                    <th>Description</th>\n                    <th>Details</th>\n                </tr>\n            </thead>\n            <tbody *ngIf=\"rules\">\n\n                <tr *ngFor=\"let rule of rules.rules\">\n            \n                    <td>{{rule.name}}</td>\n                    <td>{{rule.description}}</td>\n                    <td><a href=\"#\">click to view...</a></td> \n\n                </tr>\n</tbody>\n</table>\n</div>\n</div>\n    </div>\n"
     }),
     __metadata("design:paramtypes", [rules_service_1.RulesService])
 ], MailRulesComponent);

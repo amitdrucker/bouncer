@@ -11,7 +11,6 @@ let num = 1;
 `],
     template: `
     <div>
-        hello
         <mail-rules></mail-rules>
         <!--<nav>-->
             <!--<a routerLink="/home">Home</a> |-->

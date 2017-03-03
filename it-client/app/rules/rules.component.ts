@@ -9,17 +9,52 @@ import {Rules} from "./rules.class";
     selector: 'mail-rules',
     styles: [],
     template: `
-<div>
-  {{rules?.rules[0].accounts[0]}}
-  hello2
+<div class="container">
+	<div class="row">
+           <select name="selectValue" onchange="mostra(this.value)">
+                <option value=""></option>
+             <option value="santos">Santos</option>
+             <option value="retroPorto">Retro Porto</option>
+             <option value="itajai">Itajai</option>
+             <option value="paranagua">Paranaguá</option>
+             <option value="curitiba">Curitiba</option>
+
+             <option value="saoPaulo">Sao Paulo</option>
+
+          </select>
+		
+		
+		
+		
+		   <div class="esconde" id="opdRetro">
+             <table class="table table-striped table-hover ">
+            <thead>
+                <tr class="bg-primary">
+                    <th>Rule</th>
+                    <th>Description</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="rules">
+
+                <tr *ngFor="let rule of rules.rules">
+            
+                    <td>{{rule.name}}</td>
+                    <td>{{rule.description}}</td>
+                    <td><a href="#">click to view...</a></td> 
+
+                </tr>
+</tbody>
+</table>
 </div>
+</div>
+    </div>
 `
 })
 export class MailRulesComponent {
     private _rules: Rules;
 
     constructor(private service: RulesService) {
-        console.log("a");
         this.loadRules();
     }
 

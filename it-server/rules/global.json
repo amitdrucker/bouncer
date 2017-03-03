@@ -1,6 +1,18 @@
 {
   "rules": [
     {
+      "name": "example1",
+      "description": "example rule 1",
+      "accounts": [
+        "@gmail.com"
+      ],
+      "partners": [
+        "druckerman@hotmail.com"
+      ]
+    },
+    {
+      "name": "example2",
+      "description": "example rule 2",
       "accounts": [
         "@gmail.com"
       ],
