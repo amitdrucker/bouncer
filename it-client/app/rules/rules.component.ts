@@ -7,29 +7,17 @@ import {Rules} from "./rules.class";
 
 @Component({
     selector: 'mail-rules',
-    styles: [],
+    styles: [
+        // 'div { height: 100%; overflow-y: scroll }'
+    ],
     template: `
-<div class="container">
-	<div class="row">
-           <select name="selectValue" onchange="mostra(this.value)">
-                <option value=""></option>
-             <option value="santos">Santos</option>
-             <option value="retroPorto">Retro Porto</option>
-             <option value="itajai">Itajai</option>
-             <option value="paranagua">Paranaguá</option>
-             <option value="curitiba">Curitiba</option>
-
-             <option value="saoPaulo">Sao Paulo</option>
-
-          </select>
-		
-		
-		
-		
-		   <div class="esconde" id="opdRetro">
+<div class="container" style="height: 100%">
+	<div class="row" style="height: 100%">
+           <div class="esconde" id="opdRetro" style="height: 70%; overflow-y: scroll">
              <table class="table table-striped table-hover ">
             <thead>
                 <tr class="bg-primary">
+                    <th></th>
                     <th>Rule</th>
                     <th>Description</th>
                     <th>Details</th>
@@ -38,7 +26,13 @@ import {Rules} from "./rules.class";
             <tbody *ngIf="rules">
 
                 <tr *ngFor="let rule of rules.rules">
-            
+                <td><input type="checkbox"/>
+                    <!--ng-model="string"-->
+                    <!--[name="string"]-->
+                    <!--[ng-true-value="expression"]-->
+                    <!--[ng-false-value="expression"]-->
+                    <!--[ng-change="string"]>-->
+                </td>
                     <td>{{rule.name}}</td>
                     <td>{{rule.description}}</td>
                     <td><a href="#">click to view...</a></td> 

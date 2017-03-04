@@ -10,7 +10,7 @@ let num = 1;
     }
 `],
     template: `
-    <div>
+    <div style="height: 100%">
         <mail-rules></mail-rules>
         <!--<nav>-->
             <!--<a routerLink="/home">Home</a> |-->
