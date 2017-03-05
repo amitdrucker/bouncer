@@ -9,77 +9,65 @@ import {Rule} from "./rule.class";
 @Component({
     selector: 'mail-rules',
     styles: [
-        'table { height: 100% }',
         'thead { height: 100% }',
-        'tbody { height: 100% }',
-
-
+        'tbody { height: 100% }'
     ],
     template: `
 
-<h1>Running Rules</h1>
+        <h1>Running Rules</h1>
 
-<table style="width: 100%">
-    <tr>
-        <td>
-        <div style="height: 100%; overflow-y: scroll">
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr class="bg-primary">
-                        <th></th>
-                        <th>Rule</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody *ngIf="rules">
-                    <tr *ngFor="let rule of rules.rules" (click)="onClick(rule)">
-                    <td><input type="checkbox"/>
-                        <!--ng-model="string"-->
-                        <!--[name="string"]-->
-                        <!--[ng-true-value="expression"]-->
-                        <!--[ng-false-value="expression"]-->
-                        <!--[ng-change="string"]>-->
-                    </td>
-                        <td><a href="#">{{rule.name}}</a></td>
-                        <td>{{rule.description}}</td>
-    
-                    </tr>
-                </tbody>
-            </table>  
-            </div>
-        </td>
-        <td style="padding: 15px; width: 40%; vertical-align: top;">
-            <table *ngIf="previewItem">
-                <tr>Name: {{previewItem.name}}</tr>
-                <tr>Description: {{previewItem.description}}</tr>
-                <tr>Accounts: 
-                    <table>
-                        <tr *ngFor="let acc of previewItem.accounts">
-                            <td>{{acc}}</td>
+        <table style="width: 100%; height: 100%">
+            <tr>
+                <td>
+                    <div style="height: 100%; overflow-y: scroll">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr class="bg-primary">
+                                <th></th>
+                                <th>Rule</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody *ngIf="rules">
+                            <tr *ngFor="let rule of rules.rules" (click)="onClick(rule)">
+                                <td><input type="checkbox"/>
+                                    <!--ng-model="string"-->
+                                    <!--[name="string"]-->
+                                    <!--[ng-true-value="expression"]-->
+                                    <!--[ng-false-value="expression"]-->
+                                    <!--[ng-change="string"]>-->
+                                </td>
+                                <td><a href="#">{{rule.name}}</a></td>
+                                <td>{{rule.description}}</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+                <td style="padding: 15px; width: 40%; vertical-align: top;">
+                    <table *ngIf="previewItem">
+                        <tr>Name: {{previewItem.name}}</tr>
+                        <tr>Description: {{previewItem.description}}</tr>
+                        <tr>Accounts:
+                            <table>
+                                <tr *ngFor="let acc of previewItem.accounts">
+                                    <td>{{acc}}</td>
+                                </tr>
+                            </table>
+                        </tr>
+                        <tr *ngIf="previewItem.partners">Partners:
+                            <table>
+                                <tr *ngFor="let partner of previewItem.partners">
+                                    <td>{{partner}}</td>
+                                </tr>
+                            </table>
                         </tr>
                     </table>
-                </tr>
-                <tr *ngIf="previewItem.partners">Partners: 
-                    <table>
-                        <tr *ngFor="let partner of previewItem.partners">
-                            <td>{{partner}}</td>
-                        </tr>
-                    </table>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-<!--<nav style="height: 100%; padding: 15px;">-->
-    <!--<div class="row" style="height: 100%">-->
-        <!--<div style="height: 70%; overflow-y: scroll">-->
- <!---->
-<!--</div>-->
-<!--</div>-->
-<!--</nav>-->
-
-
-`
+                </td>
+            </tr>
+        </table>
+    `
 })
 export class MailRulesComponent {
     private _rules: Rules;
@@ -110,6 +98,4 @@ export class MailRulesComponent {
     onClick(rule) {
         this.previewItem = rule;
     }
-
-
 }
