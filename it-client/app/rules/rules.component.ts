@@ -9,55 +9,76 @@ import {Rule} from "./rule.class";
 @Component({
     selector: 'mail-rules',
     styles: [
-        // 'div { height: 100%; overflow-y: scroll }'
-    ],
-    template: `<div class="container" style="height: 100%">
-	<div class="row" style="height: 100%">
-           <div style="height: 70%; overflow-y: scroll">
-             <table class="table table-striped table-hover ">
-            <thead>
-                <tr class="bg-primary">
-                    <th></th>
-                    <th>Rule</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody *ngIf="rules">
-                <tr *ngFor="let rule of rules.rules" (click)="onClick(rule)">
-                <td><input type="checkbox"/>
-                    <!--ng-model="string"-->
-                    <!--[name="string"]-->
-                    <!--[ng-true-value="expression"]-->
-                    <!--[ng-false-value="expression"]-->
-                    <!--[ng-change="string"]>-->
-                </td>
-                    <td><a href="#">{{rule.name}}</a></td>
-                    <td>{{rule.description}}</td>
+        'table { height: 100% }',
+        'thead { height: 100% }',
+        'tbody { height: 100% }',
 
+
+    ],
+    template: `
+
+<h1>Running Rules</h1>
+
+<table style="width: 100%">
+    <tr>
+        <td>
+        <div style="height: 100%; overflow-y: scroll">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr class="bg-primary">
+                        <th></th>
+                        <th>Rule</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="rules">
+                    <tr *ngFor="let rule of rules.rules" (click)="onClick(rule)">
+                    <td><input type="checkbox"/>
+                        <!--ng-model="string"-->
+                        <!--[name="string"]-->
+                        <!--[ng-true-value="expression"]-->
+                        <!--[ng-false-value="expression"]-->
+                        <!--[ng-change="string"]>-->
+                    </td>
+                        <td><a href="#">{{rule.name}}</a></td>
+                        <td>{{rule.description}}</td>
+    
+                    </tr>
+                </tbody>
+            </table>  
+            </div>
+        </td>
+        <td style="padding: 15px; width: 40%; vertical-align: top;">
+            <table *ngIf="previewItem">
+                <tr>Name: {{previewItem.name}}</tr>
+                <tr>Description: {{previewItem.description}}</tr>
+                <tr>Accounts: 
+                    <table>
+                        <tr *ngFor="let acc of previewItem.accounts">
+                            <td>{{acc}}</td>
+                        </tr>
+                    </table>
                 </tr>
-</tbody>
+                <tr *ngIf="previewItem.partners">Partners: 
+                    <table>
+                        <tr *ngFor="let partner of previewItem.partners">
+                            <td>{{partner}}</td>
+                        </tr>
+                    </table>
+                </tr>
+            </table>
+        </td>
+    </tr>
 </table>
-</div>
-<div style="padding: 15px" *ngIf="previewItem">
-<div>Name: {{previewItem.name}}</div>
-<div>Description: {{previewItem.description}}</div>
-<div>Accounts: 
-<table>
-<tr *ngFor="let acc of previewItem.accounts">
-<td>{{acc}}</td>
-</tr>
-</table>
-</div>
-<div *ngIf="previewItem.partners">Partners: 
-<table>
-<tr *ngFor="let partner of previewItem.partners">
-<td>{{partner}}</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-    </div>
+<!--<nav style="height: 100%; padding: 15px;">-->
+    <!--<div class="row" style="height: 100%">-->
+        <!--<div style="height: 70%; overflow-y: scroll">-->
+ <!---->
+<!--</div>-->
+<!--</div>-->
+<!--</nav>-->
+
+
 `
 })
 export class MailRulesComponent {
