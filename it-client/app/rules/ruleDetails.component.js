@@ -25,9 +25,9 @@ var RuleDetailsComponent = (function () {
         },
         set: function (rule) {
             this._rule = rule;
-            this.emails = new Set(this._rule.emails);
-            this.allowedEmails = new Set(this._rule.allowedEmails);
-            this.disallowedEmails = new Set(this._rule.disallowedEmails);
+            this.emails = !this._rule.emails ? new Set() : new Set(this._rule.emails);
+            this.allowedEmails = !this._rule.allowedEmails ? new Set() : new Set(this._rule.allowedEmails);
+            this.disallowedEmails = !this._rule.disallowedEmails ? new Set() : new Set(this._rule.disallowedEmails);
         },
         enumerable: true,
         configurable: true
@@ -42,8 +42,8 @@ __decorate([
 RuleDetailsComponent = __decorate([
     core_1.Component({
         selector: 'rule-details',
-        styles: [],
-        template: "\n        <table *ngIf=\"rule\">\n            <tr>Name: {{rule.name}}</tr>\n            <tr>Description: {{rule.description}}</tr>\n            <tr>\n                <single-column-table\n                        [items]=\"emails\"\n                        tooltip=\"enter an email address or just a suffix e.g. '@gmail.com'\"\n                ></single-column-table>\n            </tr>\n            <tr tooltip=\"enter wither a full email or just the suffix\">Emails:\n                <table>\n                    <tr *ngFor=\"let email of emails\">\n                        <td>{{email}}</td>\n                    </tr>\n                </table>\n            </tr>\n            <tr *ngIf=\"disallowedEmails\">disallowedEmails:\n                <table>\n                    <tr *ngFor=\"let disallowedEmail of disallowedEmails\">\n                        <td>{{disallowedEmail}}</td>\n                    </tr>\n                </table>\n            </tr>\n        </table>"
+        styles: ["\n        single-column-table {\n            min-height: 50px;\n            max-height: 200px;\n            overflow-y: scroll;\n        }\n    "],
+        template: "\n        <table *ngIf=\"rule\">\n            <tr>\n                <label>Name: </label> {{rule.name}}\n            </tr>\n            <tr>\n                <hr>\n            </tr>\n            <tr>\n                <label>Description: </label> {{rule.description}}\n            </tr>\n            <tr>\n                <hr>\n            </tr>\n            <tr>\n                <label>Emails</label>\n                <br>\n                <single-column-table\n                        [items]=\"emails\"\n                        tooltip=\"enter an email address or just a suffix e.g. '@gmail.com'\"\n                ></single-column-table>\n            </tr>\n            <tr>\n                <hr>\n            </tr>\n            <tr>\n                <label>Allowed Emails</label>\n                <br>\n                <single-column-table\n                        [items]=\"allowedEmails\"\n                        tooltip=\"enter an email address or just a suffix e.g. '@gmail.com'\"\n                ></single-column-table>\n            </tr>\n            <tr>\n                <hr>\n            </tr>\n            <tr>\n                <label>Disallowed Emails</label>\n                <br>\n                <single-column-table\n                        [items]=\"disallowedEmails\"\n                        tooltip=\"enter an email address or just a suffix e.g. '@gmail.com'\"\n                ></single-column-table>\n            </tr>\n            <tr>\n                <hr>\n            </tr>\n        </table>"
     }),
     __metadata("design:paramtypes", [rules_service_1.RulesService])
 ], RuleDetailsComponent);
