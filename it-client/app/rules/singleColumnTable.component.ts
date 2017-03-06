@@ -29,7 +29,7 @@ import {Component, Input} from '@angular/core';
         <button type="button" id="clear" title="Clear checked items" class="btn btn-default" (click)="clear()"
                 [disabled]="!value">clear
         </button>
-        <div *ngFor="let item of items">
+        <div *ngFor="let item of items" class="list">
             <span class="glyphicon glyphicon-remove" (click)="removeItem(item)"></span>
             {{item}}
         </div>
@@ -46,13 +46,12 @@ export class SingleColumnTableComponent {
     tooltip: string;
 
     @Input()
-    set items(items: string[]) {
-        this._items = new Set(items);
-
+    set items(items: Set<string>) {
+        this._items = items;
     }
 
     get items() {
-        return Array.from(this._items);
+        return this._items;
     }
 
     _items: Set<string>;

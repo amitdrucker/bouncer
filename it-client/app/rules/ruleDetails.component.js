@@ -18,19 +18,32 @@ var rule_class_1 = require("./rule.class");
 var RuleDetailsComponent = (function () {
     function RuleDetailsComponent(service) {
         this.service = service;
-        this.rule.partners;
     }
+    Object.defineProperty(RuleDetailsComponent.prototype, "rule", {
+        get: function () {
+            return this._rule;
+        },
+        set: function (rule) {
+            this._rule = rule;
+            this.emails = new Set(this._rule.emails);
+            this.allowedEmails = new Set(this._rule.allowedEmails);
+            this.disallowedEmails = new Set(this._rule.disallowedEmails);
+        },
+        enumerable: true,
+        configurable: true
+    });
     return RuleDetailsComponent;
 }());
 __decorate([
     core_1.Input(),
-    __metadata("design:type", rule_class_1.Rule)
-], RuleDetailsComponent.prototype, "rule", void 0);
+    __metadata("design:type", rule_class_1.Rule),
+    __metadata("design:paramtypes", [rule_class_1.Rule])
+], RuleDetailsComponent.prototype, "rule", null);
 RuleDetailsComponent = __decorate([
     core_1.Component({
         selector: 'rule-details',
         styles: [],
-        template: "\n        <table *ngIf=\"item\">\n            <tr>Name: {{rule.name}}</tr>\n            <tr>Description: {{rule.description}}</tr>\n            <tr>\n                <single-column-table\n                        [items]=\"rule.accounts\"\n                        tooltip=\"enter an email address or just a suffix e.g. '@gmail.com'\"\n                ></single-column-table>\n            </tr>\n            <tr tooltip=\"enter wither a full email or just the suffix\">Email Address:\n                <table>\n                    <tr *ngFor=\"let acc of rule.accounts\">\n                        <td>{{acc}}</td>\n                    </tr>\n                </table>\n            </tr>\n            <tr *ngIf=\"rule.partners\">Partners:\n                <table>\n                    <tr *ngFor=\"let partner of rule.partners\">\n                        <td>{{partner}}</td>\n                    </tr>\n                </table>\n            </tr>\n        </table>"
+        template: "\n        <table *ngIf=\"rule\">\n            <tr>Name: {{rule.name}}</tr>\n            <tr>Description: {{rule.description}}</tr>\n            <tr>\n                <single-column-table\n                        [items]=\"emails\"\n                        tooltip=\"enter an email address or just a suffix e.g. '@gmail.com'\"\n                ></single-column-table>\n            </tr>\n            <tr tooltip=\"enter wither a full email or just the suffix\">Emails:\n                <table>\n                    <tr *ngFor=\"let email of emails\">\n                        <td>{{email}}</td>\n                    </tr>\n                </table>\n            </tr>\n            <tr *ngIf=\"disallowedEmails\">disallowedEmails:\n                <table>\n                    <tr *ngFor=\"let disallowedEmail of disallowedEmails\">\n                        <td>{{disallowedEmail}}</td>\n                    </tr>\n                </table>\n            </tr>\n        </table>"
     }),
     __metadata("design:paramtypes", [rules_service_1.RulesService])
 ], RuleDetailsComponent);

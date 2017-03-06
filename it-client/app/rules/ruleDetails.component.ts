@@ -9,39 +9,51 @@ import {Rule} from "./rule.class";
     selector: 'rule-details',
     styles: [],
     template: `
-        <table *ngIf="item">
+        <table *ngIf="rule">
             <tr>Name: {{rule.name}}</tr>
             <tr>Description: {{rule.description}}</tr>
             <tr>
                 <single-column-table
-                        [items]="rule.accounts"
+                        [items]="emails"
                         tooltip="enter an email address or just a suffix e.g. '@gmail.com'"
                 ></single-column-table>
             </tr>
-            <tr tooltip="enter wither a full email or just the suffix">Email Address:
+            <tr tooltip="enter wither a full email or just the suffix">Emails:
                 <table>
-                    <tr *ngFor="let acc of rule.accounts">
-                        <td>{{acc}}</td>
+                    <tr *ngFor="let email of emails">
+                        <td>{{email}}</td>
                     </tr>
                 </table>
             </tr>
-            <tr *ngIf="rule.partners">Partners:
+            <tr *ngIf="disallowedEmails">disallowedEmails:
                 <table>
-                    <tr *ngFor="let partner of rule.partners">
-                        <td>{{partner}}</td>
+                    <tr *ngFor="let disallowedEmail of disallowedEmails">
+                        <td>{{disallowedEmail}}</td>
                     </tr>
                 </table>
             </tr>
         </table>`
 })
 export class RuleDetailsComponent {
-    accounts : Set<string>;
-    partners : Set<string>;
-
-    constructor(private service: RulesService) {
-        this.rule.partners
-    }
+    emails: Set<string>;
+    allowedEmails: Set<string>;
+    disallowedEmails: Set<string>;
 
     @Input()
-    rule: Rule;
+    set rule(rule: Rule) {
+        this._rule = rule;
+        this.emails = new Set(this._rule.emails);
+        this.allowedEmails = new Set(this._rule.allowedEmails);
+        this.disallowedEmails = new Set(this._rule.disallowedEmails);
+    }
+
+    get rule() {
+        return this._rule;
+    }
+
+    constructor(private service: RulesService) {
+
+    }
+
+    _rule: Rule;
 }

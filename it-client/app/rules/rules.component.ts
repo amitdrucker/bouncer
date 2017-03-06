@@ -45,7 +45,7 @@ import {Rule} from "./rule.class";
                     </div>
                 </td>
                 <td style="padding: 15px; width: 40%; vertical-align: top;">
-                    <rule-details [item]="previewItem"></rule-details>
+                    <rule-details *ngIf="previewItem" [rule]="previewItem"></rule-details>
                 </td>
             </tr>
         </table>

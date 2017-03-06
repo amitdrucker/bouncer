@@ -18,10 +18,10 @@ var SingleColumnTableComponent = (function () {
     }
     Object.defineProperty(SingleColumnTableComponent.prototype, "items", {
         get: function () {
-            return Array.from(this._items);
+            return this._items;
         },
         set: function (items) {
-            this._items = new Set(items);
+            this._items = items;
         },
         enumerable: true,
         configurable: true
@@ -44,14 +44,14 @@ __decorate([
 ], SingleColumnTableComponent.prototype, "tooltip", void 0);
 __decorate([
     core_1.Input(),
-    __metadata("design:type", Array),
-    __metadata("design:paramtypes", [Array])
+    __metadata("design:type", Set),
+    __metadata("design:paramtypes", [Set])
 ], SingleColumnTableComponent.prototype, "items", null);
 SingleColumnTableComponent = __decorate([
     core_1.Component({
         selector: 'single-column-table',
         styles: ["\n        h2 {\n            font-family: arial;\n        }\n\n        form {\n            display: inline-block;\n        }\n\n        .list {\n            font-family: \"Trebuchet MS\";\n            font-size: 20px;\n            color: #000000;\n            cursor: pointer;\n        }\n    "],
-        template: "\n        <input type=\"text\" [(ngModel)]=\"value\" placeholder=\"Add Item...\"/>\n        <button type=\"button\" id=\"add\" class=\"btn btn-info\" (click)=\"addItem()\" [disabled]=\"!value\"\n                title=\"{{tooltip}}\">Add\n        </button>\n        <button type=\"button\" id=\"clear\" title=\"Clear checked items\" class=\"btn btn-default\" (click)=\"clear()\"\n                [disabled]=\"!value\">clear\n        </button>\n        <div *ngFor=\"let item of items\">\n            <span class=\"glyphicon glyphicon-remove\" (click)=\"removeItem(item)\"></span>\n            {{item}}\n        </div>\n    "
+        template: "\n        <input type=\"text\" [(ngModel)]=\"value\" placeholder=\"Add Item...\"/>\n        <button type=\"button\" id=\"add\" class=\"btn btn-info\" (click)=\"addItem()\" [disabled]=\"!value\"\n                title=\"{{tooltip}}\">Add\n        </button>\n        <button type=\"button\" id=\"clear\" title=\"Clear checked items\" class=\"btn btn-default\" (click)=\"clear()\"\n                [disabled]=\"!value\">clear\n        </button>\n        <div *ngFor=\"let item of items\" class=\"list\">\n            <span class=\"glyphicon glyphicon-remove\" (click)=\"removeItem(item)\"></span>\n            {{item}}\n        </div>\n    "
     }),
     __metadata("design:paramtypes", [])
 ], SingleColumnTableComponent);
