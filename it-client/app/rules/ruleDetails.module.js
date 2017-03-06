@@ -7,32 +7,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * Created by druker on 3/2/2017.
+ * Created by druker on 3/6/17.
  */
 var core_1 = require("@angular/core");
-var rules_component_1 = require("./rules.component");
 var rules_service_1 = require("./rules.service");
-var http_1 = require("@angular/http");
 var platform_browser_1 = require("@angular/platform-browser");
-var ruleDetails_module_1 = require("./ruleDetails.module");
-var MailRulesModule = (function () {
-    function MailRulesModule() {
+var http_1 = require("@angular/http");
+var ruleDetails_component_1 = require("./ruleDetails.component");
+var singleColumnTable_module_1 = require("./singleColumnTable.module");
+var RuleDetailsModule = (function () {
+    function RuleDetailsModule() {
     }
-    return MailRulesModule;
+    return RuleDetailsModule;
 }());
-MailRulesModule = __decorate([
+RuleDetailsModule = __decorate([
     core_1.NgModule({
-        declarations: [
-            rules_component_1.MailRulesComponent
-        ],
-        providers: [rules_service_1.RulesService],
         imports: [http_1.HttpModule,
             platform_browser_1.BrowserModule,
-            // my modules
-            ruleDetails_module_1.RuleDetailsModule
-        ],
-        exports: [rules_component_1.MailRulesComponent]
+            //my modules
+            singleColumnTable_module_1.SingleColumnTableModule],
+        exports: [ruleDetails_component_1.RuleDetailsComponent],
+        declarations: [ruleDetails_component_1.RuleDetailsComponent],
+        providers: [rules_service_1.RulesService],
     })
-], MailRulesModule);
-exports.MailRulesModule = MailRulesModule;
-//# sourceMappingURL=rules.module.js.map
+], RuleDetailsModule);
+exports.RuleDetailsModule = RuleDetailsModule;
+//# sourceMappingURL=ruleDetails.module.js.map

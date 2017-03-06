@@ -86,11 +86,11 @@ namespace OutlookAddIn3
             cc = cc == null ? "" : cc;
             foreach (Rule rule in rules.rules)
             {
-                foreach(string addr in rule.accounts)
+                foreach(string addr in rule.emails)
                 {
                     if (to.Contains(addr) || cc.Contains(addr))
                     {
-                        foreach (string otherAddr in rule.partners)
+                        foreach (string otherAddr in rule.disallowedEmails)
                         {
                             if (to.Contains(otherAddr) || cc.Contains(otherAddr))
                             {

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 public class Rule
 {
-    public List<string> accounts { get; set; }
-    public List<string> partners { get; set; }
+    public List<string> emails { get; set; }
+    public List<string> allowedEmails { get; set; }
+    public List<string> disallowedEmails { get; set; }
 }
 
 public class Rules

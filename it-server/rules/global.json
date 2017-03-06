@@ -3,361 +3,901 @@
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
-      ]
-    },
-    {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
-        "@gmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
       "name": "example1",
       "description": "example rule 1",
-      "accounts": [
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     },
     {
-      "name": "example2",
-      "description": "example rule 2",
-      "accounts": [
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
         "@gmail.com"
       ],
-      "partners": [
-        "druckerman@hotmail.com"
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
+      ]
+    },
+    {
+      "name": "example1",
+      "description": "example rule 1",
+      "emails": [
+        "@gmail.com"
+      ],
+      "allowedEmails": [
+        "@hotmail.com"
+      ],
+      "disallowedEmails": [
+        "@yahoo.com",
+        "a@yahoo.com",
+        "b@yahoo.com"
       ]
     }
   ]

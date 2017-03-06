@@ -4,6 +4,7 @@
 export class Rule {
     name: string;
     description: string;
-    accounts: string[];
-    partners: string[];
+    emails: string[];
+    allowedEmails: string[];
+    disallowedEmails: string[];
 }

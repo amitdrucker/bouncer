@@ -14,7 +14,7 @@ const opts = {
 const log = require('simple-node-logger').createRollingFileLogger(opts);
 var appRouter = function (app) {
     app.get("/", function (req, res) {
-        res.send("Hello World");
+        res.send("it-server");
     });
     app.get("/rules", function (req, res) {
         console.log('recieved request');

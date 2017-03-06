@@ -39,31 +39,13 @@ import {Rule} from "./rule.class";
                                 </td>
                                 <td><a href="#">{{rule.name}}</a></td>
                                 <td>{{rule.description}}</td>
-
                             </tr>
                             </tbody>
                         </table>
                     </div>
                 </td>
                 <td style="padding: 15px; width: 40%; vertical-align: top;">
-                    <table *ngIf="previewItem">
-                        <tr>Name: {{previewItem.name}}</tr>
-                        <tr>Description: {{previewItem.description}}</tr>
-                        <tr>Accounts:
-                            <table>
-                                <tr *ngFor="let acc of previewItem.accounts">
-                                    <td>{{acc}}</td>
-                                </tr>
-                            </table>
-                        </tr>
-                        <tr *ngIf="previewItem.partners">Partners:
-                            <table>
-                                <tr *ngFor="let partner of previewItem.partners">
-                                    <td>{{partner}}</td>
-                                </tr>
-                            </table>
-                        </tr>
-                    </table>
+                    <rule-details [item]="previewItem"></rule-details>
                 </td>
             </tr>
         </table>
