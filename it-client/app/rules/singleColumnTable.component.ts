@@ -5,31 +5,16 @@ import {Component, Input} from '@angular/core';
 
 @Component({
     selector: 'single-column-table',
-    styles: [`
-        h2 {
-            font-family: arial;
-        }
-
-        form {
-            display: inline-block;
-        }
-
-        .list {
-            font-family: "Trebuchet MS";
-            font-size: 20px;
-            color: #000000;
-            cursor: pointer;
-        }
-    `],
+    styles: [],
     template: `
         <input type="text" [(ngModel)]="value" placeholder="Add Item..."/>
-        <button type="button" id="add" class="btn btn-info" (click)="addItem()" [disabled]="!value"
+        <button type="button" id="add" (click)="addItem()" [disabled]="!value"
                 title="{{tooltip}}">Add
         </button>
-        <button type="button" id="clear" title="Clear checked items" class="btn btn-default" (click)="clear()"
+        <button type="button" id="clear" (click)="clear()"
                 [disabled]="!value">clear
         </button>
-        <div *ngFor="let item of items" class="list">
+        <div *ngFor="let item of items">
             <span class="glyphicon glyphicon-remove" (click)="removeItem(item)"></span>
             {{item}}
         </div>

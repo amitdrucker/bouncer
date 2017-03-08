@@ -8,60 +8,54 @@ import {Rule} from "./rule.class";
 @Component({
     selector: 'rule-details',
     styles: [`
-        single-column-table {
-            min-height: 50px;
-            max-height: 200px;
-            overflow-y: scroll;
+        /*single-column-table {*/
+        /*min-height: 50px;*/
+        /*max-height: 200px;*/
+        /*overflow-y: scroll;*/
+        /*}*/
+        div {
+            height: 150px;
+            overflow-y: auto;
         }
     `],
     template: `
-        <table *ngIf="rule">
-            <tr>
+        <div *ngIf="rule" style="height: 100%">
+            <div style="height: 20px; overflow: hidden">
                 <label>Name: </label> {{rule.name}}
-            </tr>
-            <tr>
-                <hr>
-            </tr>
-            <tr>
+            </div>
+            <hr>
+            <div style="height: 20px; overflow-y: hidden">
                 <label>Description: </label> {{rule.description}}
-            </tr>
-            <tr>
-                <hr>
-            </tr>
-            <tr>
+            </div>
+            <hr>
+            <div>
                 <label>Emails</label>
                 <br>
                 <single-column-table
                         [items]="emails"
                         tooltip="enter an email address or just a suffix e.g. '@gmail.com'"
                 ></single-column-table>
-            </tr>
-            <tr>
-                <hr>
-            </tr>
-            <tr>
+            </div>
+            <hr>
+            <div>
                 <label>Allowed Emails</label>
                 <br>
                 <single-column-table
                         [items]="allowedEmails"
                         tooltip="enter an email address or just a suffix e.g. '@gmail.com'"
                 ></single-column-table>
-            </tr>
-            <tr>
-                <hr>
-            </tr>
-            <tr>
+            </div>
+            <hr>
+            <div>
                 <label>Disallowed Emails</label>
                 <br>
                 <single-column-table
                         [items]="disallowedEmails"
                         tooltip="enter an email address or just a suffix e.g. '@gmail.com'"
                 ></single-column-table>
-            </tr>
-            <tr>
-                <hr>
-            </tr>
-        </table>`
+            </div>
+            <hr>
+        </div>`
 })
 export class RuleDetailsComponent {
     emails: Set<string>;
