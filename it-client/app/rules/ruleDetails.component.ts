@@ -20,6 +20,11 @@ import {Rule} from "./rule.class";
             border-bottom: 1px solid #eee;
             height: 165px;
         }
+
+        .buttons {
+            position: absolute;
+            bottom: 15px;
+        }
     `],
     template: `
         <span *ngIf="rule">
@@ -51,6 +56,10 @@ import {Rule} from "./rule.class";
                         [items]="disallowedEmails"
                         tooltip="enter an email address or just a suffix e.g. '@gmail.com'"
                 ></single-column-table>
+            </div>
+            <div class="buttons">
+                <button>Save</button>
+                <button>Discard</button>
             </div>
                 </span>
     `
