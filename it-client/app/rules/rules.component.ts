@@ -12,9 +12,9 @@ import {Rules} from "./rules.class";
         <table class="table table-condensed table-hover" style="margin-bottom: 0px">
             <thead>
             <tr>
-                <th class="span1"><input type="checkbox"></th>
-                <th class="span2">Name</th>
-                <th class="span9">Description</th>
+                <th style="width: 60px"><input type="checkbox"></th>
+                <th style="width: 200px">Name</th>
+                <th>Description</th>
             </tr>
             </thead>
         </table>
@@ -22,9 +22,9 @@ import {Rules} from "./rules.class";
             <table class="table table-condensed table-hover">
                 <tbody>
                 <tr *ngFor="let rule of rules?.rules" (click)="onClick(rule)">
-                    <td><input type="checkbox"> <a href="#"><i class="icon-star-empty"></i></a></td>
-                    <td><strong>{{rule.name}}</strong></td>
-                    <td><strong>{{rule.description}}</strong></td>
+                    <td style="width: 60px"><input type="checkbox"></td>
+                    <td style="width: 200px">{{rule.name}}</td>
+                    <td>{{rule.description}}</td>
                 </tr>
                 </tbody>
             </table>

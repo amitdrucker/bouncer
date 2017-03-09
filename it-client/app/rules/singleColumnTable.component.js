@@ -51,7 +51,7 @@ SingleColumnTableComponent = __decorate([
     core_1.Component({
         selector: 'single-column-table',
         styles: [],
-        template: "\n        <input type=\"text\" [(ngModel)]=\"value\" placeholder=\"Add Item...\"/>\n        <button type=\"button\" id=\"add\" (click)=\"addItem()\" [disabled]=\"!value\"\n                title=\"{{tooltip}}\">Add\n        </button>\n        <button type=\"button\" id=\"clear\" (click)=\"clear()\"\n                [disabled]=\"!value\">clear\n        </button>\n        <div *ngFor=\"let item of items\">\n            <span class=\"glyphicon glyphicon-remove\" (click)=\"removeItem(item)\"></span>\n            {{item}}\n        </div>\n    "
+        template: "\n        <input type=\"text\" [(ngModel)]=\"value\" placeholder=\"Add Item...\"/>\n        <button type=\"button\" id=\"add\" (click)=\"addItem()\" [disabled]=\"!value\"\n                title=\"{{tooltip}}\">Add\n        </button>\n        <button type=\"button\" id=\"clear\" (click)=\"clear()\"\n                [disabled]=\"!value\">clear\n        </button>\n        <div style=\"overflow-y: auto; height: 97px\">\n            <div *ngFor=\"let item of items\">\n                <span class=\"glyphicon glyphicon-remove\" (click)=\"removeItem(item)\"></span>\n                {{item}}\n            </div>\n        </div>\n    "
     }),
     __metadata("design:paramtypes", [])
 ], SingleColumnTableComponent);

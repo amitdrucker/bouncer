@@ -14,9 +14,11 @@ import {Component, Input} from '@angular/core';
         <button type="button" id="clear" (click)="clear()"
                 [disabled]="!value">clear
         </button>
-        <div *ngFor="let item of items">
-            <span class="glyphicon glyphicon-remove" (click)="removeItem(item)"></span>
-            {{item}}
+        <div style="overflow-y: auto; height: 97px">
+            <div *ngFor="let item of items">
+                <span class="glyphicon glyphicon-remove" (click)="removeItem(item)"></span>
+                {{item}}
+            </div>
         </div>
     `
 })

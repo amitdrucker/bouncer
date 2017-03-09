@@ -13,7 +13,7 @@ import {RulesService} from "./rules/rules.service";
             </div>
             <div style="float:left; width: 30%; 
             margin-top: 30px; border-top: 3px solid lightgray;
-                 padding: 15px;">
+                 padding-left: 15px;">
                 <rule-details *ngIf="service.previewItem" [rule]="service?.previewItem">
                 </rule-details>
             </div>

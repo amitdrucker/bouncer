@@ -22,7 +22,7 @@ AppComponent = __decorate([
         selector: 'my-app',
         styles: [],
         providers: [],
-        template: "\n        <div style=\"height: 100%;\n            overflow-y: hidden;\">\n            <div style=\"width: 70%; height: 100%; overflow-y: hidden; float: left\">\n                <mail-rules></mail-rules>\n            </div>\n            <div style=\"float:left; width: 30%; \n            margin-top: 30px; border-top: 3px solid lightgray;\n                 padding: 15px;\">\n                <rule-details *ngIf=\"service.previewItem\" [rule]=\"service?.previewItem\">\n                </rule-details>\n            </div>\n        </div>\n\n    "
+        template: "\n        <div style=\"height: 100%;\n            overflow-y: hidden;\">\n            <div style=\"width: 70%; height: 100%; overflow-y: hidden; float: left\">\n                <mail-rules></mail-rules>\n            </div>\n            <div style=\"float:left; width: 30%; \n            margin-top: 30px; border-top: 3px solid lightgray;\n                 padding-left: 15px;\">\n                <rule-details *ngIf=\"service.previewItem\" [rule]=\"service?.previewItem\">\n                </rule-details>\n            </div>\n        </div>\n\n    "
     }),
     __metadata("design:paramtypes", [rules_service_1.RulesService])
 ], AppComponent);

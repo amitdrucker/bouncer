@@ -8,18 +8,27 @@ import {Rule} from "./rule.class";
 @Component({
     selector: 'rule-details',
     styles: [`
+        .detailsRow {
+            padding-top: 15px;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+
+        .unscrollable {
+            padding-top: 15px;
+            overflow-y: hidden;
+            border-bottom: 1px solid #eee;
+            height: 165px;
+        }
     `],
     template: `
         <span *ngIf="rule">
-            <div style="height: 20px; overflow: hidden;">
+            <div class="detailsRow">
                 <label>Name: </label> {{rule.name}}
-            </div>
-            <hr>
-            <div style="height: 20px; overflow-y: hidden">
+                <br>
                 <label>Description: </label> {{rule.description}}
             </div>
-            <hr>
-            <div>
+            <div class="unscrollable">
                 <label>Emails</label>
                 <br>
                 <single-column-table
@@ -27,8 +36,7 @@ import {Rule} from "./rule.class";
                         tooltip="enter an email address or just a suffix e.g. '@gmail.com'"
                 ></single-column-table>
             </div>
-            <hr>
-            <div>
+            <div class="unscrollable">
                 <label>Allowed Emails</label>
                 <br>
                 <single-column-table
@@ -36,8 +44,7 @@ import {Rule} from "./rule.class";
                         tooltip="enter an email address or just a suffix e.g. '@gmail.com'"
                 ></single-column-table>
             </div>
-            <hr>
-            <div>
+            <div class="unscrollable">
                 <label>Disallowed Emails</label>
                 <br>
                 <single-column-table
@@ -45,7 +52,6 @@ import {Rule} from "./rule.class";
                         tooltip="enter an email address or just a suffix e.g. '@gmail.com'"
                 ></single-column-table>
             </div>
-            <hr>
                 </span>
     `
 })
