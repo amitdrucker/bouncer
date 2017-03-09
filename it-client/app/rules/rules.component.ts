@@ -4,56 +4,35 @@
 import {Component} from "@angular/core";
 import {RulesService} from "./rules.service";
 import {Rules} from "./rules.class";
-import {Rule} from "./rule.class";
 
 @Component({
     selector: 'mail-rules',
-    styles: [
-        'thead { height: 100% }',
-        'tbody { height: 100% }'
-    ],
+    styles: [],
     template: `
-
-        <h1>Running Rules</h1>
-
-        <table style="width: 100%; height: 100%">
+        <table class="table table-condensed table-hover" style="margin-bottom: 0px">
+            <thead>
             <tr>
-                <td>
-                    <div style="height: 100%; overflow-y: scroll">
-                        <table class="table table-striped table-hover">
-                            <thead>
-                            <tr class="bg-primary">
-                                <th></th>
-                                <th>Rule</th>
-                                <th>Description</th>
-                            </tr>
-                            </thead>
-                            <tbody *ngIf="rules">
-                            <tr *ngFor="let rule of rules.rules" (click)="onClick(rule)">
-                                <td><input type="checkbox"/>
-                                    <!--ng-model="string"-->
-                                    <!--[name="string"]-->
-                                    <!--[ng-true-value="expression"]-->
-                                    <!--[ng-false-value="expression"]-->
-                                    <!--[ng-change="string"]>-->
-                                </td>
-                                <td><a href="#">{{rule.name}}</a></td>
-                                <td>{{rule.description}}</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </td>
-                <td style="padding: 15px; width: 40%; vertical-align: top;">
-                    <rule-details *ngIf="previewItem" [rule]="previewItem"></rule-details>
-                </td>
+                <th class="span1"><input type="checkbox"></th>
+                <th class="span2">Name</th>
+                <th class="span9">Description</th>
             </tr>
+            </thead>
         </table>
+        <div style="height: 94%; overflow-y: auto">
+            <table class="table table-condensed table-hover">
+                <tbody>
+                <tr *ngFor="let rule of rules?.rules" (click)="onClick(rule)">
+                    <td><input type="checkbox"> <a href="#"><i class="icon-star-empty"></i></a></td>
+                    <td><strong>{{rule.name}}</strong></td>
+                    <td><strong>{{rule.description}}</strong></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     `
 })
 export class MailRulesComponent {
     private _rules: Rules;
-    private previewItem: Rule;
 
     constructor(private service: RulesService) {
         this.loadRules();
@@ -78,6 +57,6 @@ export class MailRulesComponent {
     }
 
     onClick(rule) {
-        this.previewItem = rule;
+        this.service.previewItem = rule;
     }
 }

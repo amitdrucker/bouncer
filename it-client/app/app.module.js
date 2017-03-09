@@ -11,6 +11,7 @@ var app_component_1 = require("./app.component");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 var rules_module_1 = require("./rules/rules.module");
+var ruleDetails_module_1 = require("./rules/ruleDetails.module");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,7 +28,8 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             http_1.HttpModule,
             // my modules
-            rules_module_1.MailRulesModule
+            rules_module_1.MailRulesModule,
+            ruleDetails_module_1.RuleDetailsModule
         ],
         exports: []
     })

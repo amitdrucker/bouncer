@@ -8,19 +8,10 @@ import {Rule} from "./rule.class";
 @Component({
     selector: 'rule-details',
     styles: [`
-        /*single-column-table {*/
-        /*min-height: 50px;*/
-        /*max-height: 200px;*/
-        /*overflow-y: scroll;*/
-        /*}*/
-        div {
-            height: 150px;
-            overflow-y: auto;
-        }
     `],
     template: `
-        <div *ngIf="rule" style="height: 100%">
-            <div style="height: 20px; overflow: hidden">
+        <span *ngIf="rule">
+            <div style="height: 20px; overflow: hidden;">
                 <label>Name: </label> {{rule.name}}
             </div>
             <hr>
@@ -55,7 +46,8 @@ import {Rule} from "./rule.class";
                 ></single-column-table>
             </div>
             <hr>
-        </div>`
+                </span>
+    `
 })
 export class RuleDetailsComponent {
     emails: Set<string>;

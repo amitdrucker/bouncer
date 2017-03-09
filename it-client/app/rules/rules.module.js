@@ -14,7 +14,6 @@ var rules_component_1 = require("./rules.component");
 var rules_service_1 = require("./rules.service");
 var http_1 = require("@angular/http");
 var platform_browser_1 = require("@angular/platform-browser");
-var ruleDetails_module_1 = require("./ruleDetails.module");
 var MailRulesModule = (function () {
     function MailRulesModule() {
     }
@@ -27,9 +26,7 @@ MailRulesModule = __decorate([
         ],
         providers: [rules_service_1.RulesService],
         imports: [http_1.HttpModule,
-            platform_browser_1.BrowserModule,
-            // my modules
-            ruleDetails_module_1.RuleDetailsModule
+            platform_browser_1.BrowserModule
         ],
         exports: [rules_component_1.MailRulesComponent]
     })
