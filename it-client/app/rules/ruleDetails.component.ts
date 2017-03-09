@@ -23,7 +23,7 @@ import {Rule} from "./rule.class";
 
         .buttons {
             position: absolute;
-            bottom: 15px;
+            bottom: 5px;
         }
     `],
     template: `

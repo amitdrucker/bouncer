@@ -18,7 +18,7 @@ import {Rules} from "./rules.class";
             </tr>
             </thead>
         </table>
-        <div style="height: 94%; overflow-y: auto">
+        <div style="height: 97%; overflow-y: auto">
             <table class="table table-condensed table-hover">
                 <tbody>
                 <tr *ngFor="let rule of rules?.rules" (click)="onClick(rule)">
