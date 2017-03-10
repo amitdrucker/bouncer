@@ -18,6 +18,7 @@ var rules_class_1 = require("./rules.class");
 var MailRulesComponent = (function () {
     function MailRulesComponent(service) {
         this.service = service;
+        this.checked = new Set();
         this.loadRules();
     }
     Object.defineProperty(MailRulesComponent.prototype, "rules", {
@@ -27,6 +28,31 @@ var MailRulesComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    MailRulesComponent.prototype.onCheckAll = function () {
+        if (this.isAllChecked()) {
+            this.checked = new Set();
+        }
+        else {
+            this.checked = new Set(this.rules.rules);
+        }
+    };
+    MailRulesComponent.prototype.onCheck = function (rule) {
+        if (this.isChecked(rule)) {
+            this.checked.delete(rule);
+        }
+        else {
+            this.checked.add(rule);
+        }
+    };
+    MailRulesComponent.prototype.isChecked = function (rule) {
+        return this.checked.has(rule);
+    };
+    MailRulesComponent.prototype.isAllChecked = function () {
+        if (!this.rules || !this.checked) {
+            return false;
+        }
+        return this.checked.size === this.rules.rules.length;
+    };
     MailRulesComponent.prototype.loadRules = function () {
         var _this = this;
         this.service.loadRules().subscribe(function (rules) {
@@ -47,7 +73,7 @@ MailRulesComponent = __decorate([
     core_1.Component({
         selector: 'mail-rules',
         styles: [],
-        template: "\n        <table class=\"table table-condensed table-hover\" style=\"margin-bottom: 0px\">\n            <thead>\n            <tr>\n                <th style=\"width: 60px\"><input type=\"checkbox\"></th>\n                <th style=\"width: 200px\">Name</th>\n                <th>Description</th>\n            </tr>\n            </thead>\n        </table>\n        <div style=\"height: 97%; overflow-y: auto\">\n            <table class=\"table table-condensed table-hover\">\n                <tbody>\n                <tr *ngFor=\"let rule of rules?.rules\" (click)=\"onClick(rule)\">\n                    <td style=\"width: 60px\"><input type=\"checkbox\"></td>\n                    <td style=\"width: 200px\">{{rule.name}}</td>\n                    <td>{{rule.description}}</td>\n                </tr>\n                </tbody>\n            </table>\n        </div>\n    "
+        template: "\n        <table class=\"table table-condensed table-hover\" style=\"margin-bottom: 0px\">\n            <thead>\n            <tr>\n                <th style=\"width: 60px\">\n                    <input type=\"checkbox\"\n                           [checked]=\"isAllChecked()\"\n                           (click)=\"onCheckAll()\">\n                </th>\n                <th style=\"width: 200px\">Name</th>\n                <th>Description</th>\n            </tr>\n            </thead>\n        </table>\n        <div style=\"height: 97%; overflow-y: auto\">\n            <table class=\"table table-condensed table-hover\">\n                <tbody>\n                <tr *ngFor=\"let rule of rules?.rules\" (click)=\"onClick(rule)\">\n                    <td style=\"width: 60px\">\n                        <input type=\"checkbox\" [checked]=\"isChecked(rule)\"\n                               (click)=\"onCheck(rule)\">\n                    </td>\n                    <td style=\"width: 200px\">{{rule.name}}</td>\n                    <td>{{rule.description}}</td>\n                </tr>\n                </tbody>\n            </table>\n        </div>\n    "
     }),
     __metadata("design:paramtypes", [rules_service_1.RulesService])
 ], MailRulesComponent);

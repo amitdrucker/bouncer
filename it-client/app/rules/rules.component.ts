@@ -4,6 +4,7 @@
 import {Component} from "@angular/core";
 import {RulesService} from "./rules.service";
 import {Rules} from "./rules.class";
+import {Rule} from "./rule.class";
 
 @Component({
     selector: 'mail-rules',
@@ -12,7 +13,11 @@ import {Rules} from "./rules.class";
         <table class="table table-condensed table-hover" style="margin-bottom: 0px">
             <thead>
             <tr>
-                <th style="width: 60px"><input type="checkbox"></th>
+                <th style="width: 60px">
+                    <input type="checkbox"
+                           [checked]="isAllChecked()"
+                           (click)="onCheckAll()">
+                </th>
                 <th style="width: 200px">Name</th>
                 <th>Description</th>
             </tr>
@@ -22,7 +27,10 @@ import {Rules} from "./rules.class";
             <table class="table table-condensed table-hover">
                 <tbody>
                 <tr *ngFor="let rule of rules?.rules" (click)="onClick(rule)">
-                    <td style="width: 60px"><input type="checkbox"></td>
+                    <td style="width: 60px">
+                        <input type="checkbox" [checked]="isChecked(rule)"
+                               (click)="onCheck(rule)">
+                    </td>
                     <td style="width: 200px">{{rule.name}}</td>
                     <td>{{rule.description}}</td>
                 </tr>
@@ -33,6 +41,7 @@ import {Rules} from "./rules.class";
 })
 export class MailRulesComponent {
     private _rules: Rules;
+    checked: Set<Rule> = new Set<Rule>();
 
     constructor(private service: RulesService) {
         this.loadRules();
@@ -40,6 +49,33 @@ export class MailRulesComponent {
 
     get rules(): any {
         return this._rules;
+    }
+
+    onCheckAll() {
+        if (this.isAllChecked()) {
+            this.checked = new Set<Rule>();
+        } else {
+            this.checked = new Set<Rule>(this.rules.rules);
+        }
+    }
+
+    onCheck(rule: Rule) {
+        if (this.isChecked(rule)) {
+            this.checked.delete(rule);
+        } else {
+            this.checked.add(rule);
+        }
+    }
+
+    isChecked(rule: Rule) {
+        return this.checked.has(rule);
+    }
+
+    isAllChecked() {
+        if (!this.rules || !this.checked) {
+            return false;
+        }
+        return this.checked.size === this.rules.rules.length;
     }
 
     loadRules() {
