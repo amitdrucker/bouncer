@@ -9,6 +9,7 @@ using Office = Microsoft.Office.Core;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using System.Runtime.InteropServices;
 
 namespace OutlookAddIn3
 {
@@ -21,6 +22,7 @@ namespace OutlookAddIn3
         private Outlook.Application application;
         private const string rulesUrl = "http://localhost:3000/rules";
         private const string reportUrl = "http://localhost:3000/report";
+        private const string historyUrl = "http://localhost:3000/history";
         private Rules rules;
         private readonly object syncLock = new object();
 
@@ -33,6 +35,7 @@ namespace OutlookAddIn3
             OutlookInspectors.NewInspector += new Microsoft.Office.Interop.Outlook.InspectorsEvents_NewInspectorEventHandler(OutlookInspectors_NewInspector);
             OutlookApplication.ItemSend += new Microsoft.Office.Interop.Outlook.ApplicationEvents_11_ItemSendEventHandler(OutlookApplication_ItemSend);
             loadRules();
+            searchSentMail();
         }
 
         private async void loadRules()
@@ -51,6 +54,55 @@ namespace OutlookAddIn3
                 }
             }, null, 0, 60000);
         }
+
+        private async void postHistory(List<String> list)
+        {            
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            string postBody = JsonConvert.SerializeObject(list);
+            HttpResponseMessage response = await client.PostAsync(historyUrl, 
+                new StringContent(postBody, Encoding.UTF8, "application/json"));  // Blocking call!
+            HttpContent content = response.Content;
+            String result = await content.ReadAsStringAsync();           
+        }
+
+        private void searchSentMail()
+        {
+            List<String> list = new List<string>();
+            list.Add(System.Security.Principal.WindowsIdentity.GetCurrent().Name);
+            Outlook.NameSpace nameSpace = null;
+            Outlook.Folder inboxFolder = null;
+            Outlook.Items inboxItems = null;           
+
+            try
+            {
+                nameSpace = OutlookApplication.GetNamespace("MAPI");
+                inboxFolder = nameSpace.GetDefaultFolder(
+                    Outlook.OlDefaultFolders.olFolderSentMail) as Outlook.Folder;
+                if (inboxFolder != null)
+                {
+                    inboxItems = inboxFolder.Items;
+                    for (int i = 1; i <= inboxItems.Count; i++)
+                    {
+                        Outlook.MailItem mail = inboxItems[i] as Outlook.MailItem;
+                        if (mail != null)
+                        {
+                            list.Add(mail.To);                            
+                            Marshal.ReleaseComObject(mail);
+                        }
+                    }
+                    postHistory(list);
+                }
+            }
+            finally
+            {
+                if (inboxItems != null) Marshal.ReleaseComObject(inboxItems);
+                if (inboxFolder != null) Marshal.ReleaseComObject(inboxFolder);
+                if (nameSpace != null) Marshal.ReleaseComObject(nameSpace);
+            }
+        }
+
+
 
         private async void reportIT(string from, string msg)
         {

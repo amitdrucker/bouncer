@@ -30,6 +30,11 @@ var appRouter = function (app) {
         return res.send(req.body);
     });
 
+    app.post("/history", function (req, res) {
+        log.info(req.body.message);
+        return res.send(req.body);
+    });
+
 };
 
 module.exports = appRouter;
