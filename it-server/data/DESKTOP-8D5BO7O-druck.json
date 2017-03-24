@@ -1,0 +1,72 @@
+{
+  "items": [
+    {
+      "to": "druckerman@hotmail.com",
+      "cc": "b@aaa.com"
+    },
+    {
+      "to": "amitdrucker@gmail.com",
+      "cc": "kerenvman@gmail.com"
+    },
+    {
+      "to": "amitdrucker@gmail.com; druckerman@hotmail.com",
+      "cc": null
+    },
+    {
+      "to": "amitdrucker@gmail.com; 'amitdrucker@yahoo.com'",
+      "cc": null
+    },
+    {
+      "to": "amitdrucker@gmail.com; 'amitdrucker@yahoo.com'",
+      "cc": null
+    },
+    {
+      "to": "amitdrucker@gmail.com; 'amitdrucker@yahoo.com'",
+      "cc": null
+    },
+    {
+      "to": "amitdrucker@gmail.com",
+      "cc": null
+    },
+    {
+      "to": "amitdrucker@gmail.com; kerenvman@gmail.com",
+      "cc": null
+    },
+    {
+      "to": "amitdrucker@gmail.com",
+      "cc": null
+    },
+    {
+      "to": "cecilia dahlin",
+      "cc": null
+    },
+    {
+      "to": "ronanoshi@hotmail.com",
+      "cc": null
+    },
+    {
+      "to": "support@play65.com",
+      "cc": null
+    },
+    {
+      "to": "eu_hiring_services@intel.com",
+      "cc": null
+    },
+    {
+      "to": "staffing.no.reply@intel.com",
+      "cc": null
+    },
+    {
+      "to": "lior simovich",
+      "cc": null
+    },
+    {
+      "to": "liat druker",
+      "cc": null
+    },
+    {
+      "to": "shiran kfir",
+      "cc": null
+    }
+  ]
+}

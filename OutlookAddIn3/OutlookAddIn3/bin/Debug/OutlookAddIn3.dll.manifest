@@ -43,12 +43,47 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Accessibility" version="4.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="Microsoft.CSharp" version="4.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="mscorlib" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Data" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Data.DataSetExtensions" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Drawing" version="4.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -59,6 +94,26 @@
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="System.Numerics" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Runtime.Serialization" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Windows.Forms" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Xml" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Xml.Linq" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -158,14 +213,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OutlookAddIn3.dll" size="26112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OutlookAddIn3.dll" size="28160">
       <assemblyIdentity name="OutlookAddIn3" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ER+kXSv4AdnhrIW8RbDV4IIpOVV2wSkvLL3oRuZ0GE0=</dsig:DigestValue>
+        <dsig:DigestValue>cx8Zbc6GYPqiLB1ySXG3yqhWmAfzmhry7Fil//8JfRA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -192,4 +247,4 @@
       </vstov4:customizations>
     </vstav3:application>
   </vstav3:addIn>
-<publisherIdentity name="CN=DESKTOP-8D5BO7O\druck" issuerKeyHash="779b9c0932f8ff26a2cc6f2ebbec490b2ed337e6" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>KzZlYmZJ2min3IoHpnmtQdfR5ammbdo+cnXMsqBZGHk=</DigestValue></Reference></SignedInfo><SignatureValue>DIJgZUwfG3ZT1t//kUydDGYrn624/FSiXXNtkL1eOaLmUhPmUkE9OCfiaBPaiFvvkNrwD/z5xXtyV65B50HS+jI9kDiSifGf7U2rPKIRkvd+c6V1TAd6Ov9KVD9rxvJ3MiJ48NNinkEPbg0oahjD7rHYZoIQcTxaCkv8m3fnFGQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>y9MJTWJpGIyN/UPYnIWjDCXyICodQRD6Ej6QqtBXfgzjizztJ467qjqTIftIb7rV8bVfAI7rDqHibR2aA+nov7F50N5ZDpvI0ILh5EPrSUMTXvNUb4XBIRYb5Z7SzP9mCV4jCMo2uXyQQ4V1kGwaQpSswo74wI8eaa+3sNWxHSc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="791859a0b2cc75723eda6da6a9e5d1d741ad79a6078adca768da49666265362b" Description="" Url=""><as:assemblyIdentity name="OutlookAddIn3.dll" version="1.0.0.0" publicKeyToken="42ab33afddc9dabb" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-8D5BO7O\druck</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>6ZIWA6tV5IGKBlUWPAHCzg9G84l+10x1dprdr0IqSJk=</DigestValue></Reference></SignedInfo><SignatureValue>wpMmWAaSlSfV9ZSX8rEE1T3I2XeiptweIJsaEQBR/UEBxPxAi1ehHLYumgXPNDw7/Nw+SA/5KOglUgdTHU3CBnR7UaxvGoKk3VDFCTye5NFEJFSP5g3P+1kBpVxsDVOD0Hg2kWP2H2BansvXZ8lFOKRUkaoNadeEuLIO6Pj0jA0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>y9MJTWJpGIyN/UPYnIWjDCXyICodQRD6Ej6QqtBXfgzjizztJ467qjqTIftIb7rV8bVfAI7rDqHibR2aA+nov7F50N5ZDpvI0ILh5EPrSUMTXvNUb4XBIRYb5Z7SzP9mCV4jCMo2uXyQQ4V1kGwaQpSswo74wI8eaa+3sNWxHSc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQEzN5WWc3mY1C056qnDLbXTANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADgARAA1AEIATwA3AE8AXABkAHIAdQBjAGswHhcNMTcwMjI0MjEwMzU0WhcNMTgwMjI1MDMwMzU0WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADgARAA1AEIATwA3AE8AXABkAHIAdQBjAGswgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMvTCU1iaRiMjf1D2JyFowwl8iAqHUEQ+hI+kKrQV34M44s87SeOu6o6kyH7SG+61fG1XwCO6w6h4m0dmgPp6L+xedDeWQ6byNCC4eRD60lDE17zVG+FwSEWG+We0sz/ZgleIwjKNrl8kEOFdZBsGkKUrMKO+MCPHmmvt7DVsR0nAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAZxMgY6Qkl4ngs15dD/eoh2L86kCSBZQq9hsCEZKL79rgEhMneOeO+sd6IhST3jK5c3LrqJzANxC05h0GprJ0J9T15He5rbgukr5d9YkCRLtObhFwjJjRaC0+6Vu2XNMmlF5vW8PaHX9CHJqq7o8i9EqG4FCOx11t5WW7bfok9Zg=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=DESKTOP-8D5BO7O\druck" issuerKeyHash="779b9c0932f8ff26a2cc6f2ebbec490b2ed337e6" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>esYb4xoLpX2iUyMJ8f6WKHgl1f7laKpYNbi44TlgjSg=</DigestValue></Reference></SignedInfo><SignatureValue>QoOd3bt2m9WVftZa0rJaB1Wua5uueneHR38cV089PsmKP4OIqfv23pD7gQKWcdSwdYXrsguKz7VCZoP6GtdqvZvEqvGe8QYvAqUd3silv9VogD39mFCld9Gx0cui+pQhDkTQd16Vc9xbGh8DGadmluHPVrtuezMvLzMsz0SyBmk=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>y9MJTWJpGIyN/UPYnIWjDCXyICodQRD6Ej6QqtBXfgzjizztJ467qjqTIftIb7rV8bVfAI7rDqHibR2aA+nov7F50N5ZDpvI0ILh5EPrSUMTXvNUb4XBIRYb5Z7SzP9mCV4jCMo2uXyQQ4V1kGwaQpSswo74wI8eaa+3sNWxHSc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="288d6039e1b8b83558aa68e5fed525782896fef1092353a27da50b1ae31bc67a" Description="" Url=""><as:assemblyIdentity name="OutlookAddIn3.dll" version="1.0.0.0" publicKeyToken="42ab33afddc9dabb" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-8D5BO7O\druck</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ke+NX0BvTY5PlRDpkoz8vR8FQWyNjDrJy5W273gP74M=</DigestValue></Reference></SignedInfo><SignatureValue>DpZs/rb2AQfzSY+utDUU5bB+abtyUt5/tfVYCbv8i39qlE2X6k7CnNhwU7yBl4P9UKYXrwJFNYk1NfJ6yNvmOqqeQG/UTwBrWulEvbR5btXB9jlyRDqpsSpUnHPzgQUblZPZlABGvvYpjqdHMT7Qikstw5i6oE96mkyQBD3iCfk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>y9MJTWJpGIyN/UPYnIWjDCXyICodQRD6Ej6QqtBXfgzjizztJ467qjqTIftIb7rV8bVfAI7rDqHibR2aA+nov7F50N5ZDpvI0ILh5EPrSUMTXvNUb4XBIRYb5Z7SzP9mCV4jCMo2uXyQQ4V1kGwaQpSswo74wI8eaa+3sNWxHSc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQEzN5WWc3mY1C056qnDLbXTANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADgARAA1AEIATwA3AE8AXABkAHIAdQBjAGswHhcNMTcwMjI0MjEwMzU0WhcNMTgwMjI1MDMwMzU0WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADgARAA1AEIATwA3AE8AXABkAHIAdQBjAGswgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMvTCU1iaRiMjf1D2JyFowwl8iAqHUEQ+hI+kKrQV34M44s87SeOu6o6kyH7SG+61fG1XwCO6w6h4m0dmgPp6L+xedDeWQ6byNCC4eRD60lDE17zVG+FwSEWG+We0sz/ZgleIwjKNrl8kEOFdZBsGkKUrMKO+MCPHmmvt7DVsR0nAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAZxMgY6Qkl4ngs15dD/eoh2L86kCSBZQq9hsCEZKL79rgEhMneOeO+sd6IhST3jK5c3LrqJzANxC05h0GprJ0J9T15He5rbgukr5d9YkCRLtObhFwjJjRaC0+6Vu2XNMmlF5vW8PaHX9CHJqq7o8i9EqG4FCOx11t5WW7bfok9Zg=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

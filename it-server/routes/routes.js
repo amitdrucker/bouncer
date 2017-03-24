@@ -30,11 +30,20 @@ var appRouter = function (app) {
         return res.send(req.body);
     });
 
-    app.post("/history", function (req, res) {
-        log.info(req.body.message);
-        return res.send(req.body);
+    app.post("/data", function (req, res) {
+        var path = './data/' + req.body.sender.replace("\\", "-") + ".json";
+        var file;
+        if (fs.existsSync(path)) {
+            file = JSON.parse(fs.readFileSync(path));
+        } else {
+            file = {items: []};
+        }
+        req.body.list.forEach(function (item) {
+            file.items.push(item);
+        });
+        fs.writeFileSync(path, JSON.stringify(file));
+        return res.send("Success");
     });
-
 };
 
 module.exports = appRouter;
