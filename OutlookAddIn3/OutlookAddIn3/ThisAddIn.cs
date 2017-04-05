@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace OutlookAddIn3
 {
@@ -18,6 +19,7 @@ namespace OutlookAddIn3
         public Outlook.Inspector OutlookInspector;
         public Outlook.MailItem OutlookMailItem;
         private Outlook.Application application;
+        private const string baseUrl = "http://localhost:3000/";
         private const string rulesUrl = "http://localhost:3000/rules";
         private const string reportUrl = "http://localhost:3000/report";
         private const string dataUrl = "http://localhost:3000/data";
@@ -25,7 +27,8 @@ namespace OutlookAddIn3
         private readonly object syncLock = new object();
         private const string TO = "http://schemas.microsoft.com/mapi/proptag/0x0E04001E";
         private const string CC = "http://schemas.microsoft.com/mapi/proptag/0x0E03001E";
-        private const string SUBJECT = "Subject";        
+        private const string SUBJECT = "Subject";
+        private string result = null;
 
 
 
@@ -37,7 +40,7 @@ namespace OutlookAddIn3
             new Microsoft.Office.Interop.Outlook.InspectorsEvents_NewInspectorEventHandler(OutlookInspectors_NewInspector);
             OutlookInspectors.NewInspector += new Microsoft.Office.Interop.Outlook.InspectorsEvents_NewInspectorEventHandler(OutlookInspectors_NewInspector);
             OutlookApplication.ItemSend += new Microsoft.Office.Interop.Outlook.ApplicationEvents_11_ItemSendEventHandler(OutlookApplication_ItemSend);
-            searchSentMailUsingTable();
+            //searchSentMailUsingTable();
         }       
 
         private async void postHistory(Messages list)
@@ -50,8 +53,25 @@ namespace OutlookAddIn3
                 HttpResponseMessage response = await client.PostAsync(dataUrl,
                     new StringContent(postBody, Encoding.UTF8, "application/json"));  // Blocking call!
                 HttpContent content = response.Content;
-                String result = await content.ReadAsStringAsync();
+                string result = await content.ReadAsStringAsync();
             }
+        }
+
+        private String doSyncPost(Object body, string suffix)
+        {
+            return doPost(body, suffix).Result;
+        }
+
+        private async Task<string> doPost(Object body, string suffix)
+        {
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            string postBody = JsonConvert.SerializeObject(body);
+            HttpResponseMessage response = await client.PostAsync(baseUrl + suffix,
+                new StringContent(postBody, Encoding.UTF8, "application/json"));  // Blocking call!
+            HttpContent content = response.Content;
+            result = await content.ReadAsStringAsync();
+            return result;
         }
 
         private void searchSentMailUsingTable() {
@@ -72,7 +92,7 @@ namespace OutlookAddIn3
                     while (!sentTable.EndOfTable)
                     {                        
                         Outlook.Row row = sentTable.GetNextRow();
-                        messages.Add(new Message(row[TO], row[CC]));
+                        messages.Add(new Message(row[TO], row[CC], null));
                         Marshal.ReleaseComObject(row);
                     }
                     Marshal.ReleaseComObject(sentTable);
@@ -101,20 +121,18 @@ namespace OutlookAddIn3
 
         }
 
-       
         void OutlookApplication_ItemSend(object Item, ref bool Cancel)
-        {
-            String msg = null;
-            lock (syncLock)
+        {                         
+            string msg = doSyncPost(new Message(OutlookMailItem.To, OutlookMailItem.CC,
+                System.Security.Principal.WindowsIdentity.GetCurrent().Name), "check");
+            if (!msg.Equals("OK"))
             {
-                msg = validateRules(OutlookMailItem.To, OutlookMailItem.CC);
-            }
-            if (msg != null)
-            {
-                reportIT(System.Security.Principal.WindowsIdentity.GetCurrent().Name, msg);
-                MessageBox.Show("Company rules don't allow sending this message:\r\n" + msg 
-                    + "\r\nPlease try again after issues resolved or contact your IT department");
-                Cancel = true;
+                string warning = "Mail bouncer caught issues with your message:\r\n" + msg
+                    + "\r\nAre you sure you want to continue?";
+                if (MessageBox.Show(warning, "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    Cancel = true;
+                }
             }
         }
 

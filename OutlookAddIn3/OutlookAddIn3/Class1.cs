@@ -20,11 +20,14 @@ public class Rules
 
 public class Message
 {
-    public Message(string to, string cc)
+    public Message(string to, string cc, string user)
     {
         this.to = to;
         this.cc = cc;
+        this.user = user;
     }
+
+    public string user;
     public string to;
     public string cc;
 }

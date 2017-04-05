@@ -25,6 +25,12 @@ var appRouter = function (app) {
             return res.send(JSON.parse(data));
         });
     });
+    app.post("/check", function (req, res) {
+        var user = req.body.user;
+        var to = req.body.to;
+        var cc = req.body.cc;
+        return res.send();
+    });
     app.post("/report", function (req, res) {
         log.info(req.body.message);
         return res.send(req.body);

@@ -69,3 +69,4 @@ D:\my-project\bouncer\OutlookAddIn3\OutlookAddIn3\obj\Debug\OutlookAddIn3.Proper
 D:\my-project\bouncer\OutlookAddIn3\OutlookAddIn3\obj\Debug\OutlookAddIn3.csproj.GenerateResource.Cache
 D:\my-project\bouncer\OutlookAddIn3\OutlookAddIn3\obj\Debug\OutlookAddIn3.dll
 D:\my-project\bouncer\OutlookAddIn3\OutlookAddIn3\obj\Debug\OutlookAddIn3.pdb
+D:\my-project\bouncer\OutlookAddIn3\OutlookAddIn3\obj\Debug\OutlookAddIn3.csprojResolveAssemblyReference.cache
